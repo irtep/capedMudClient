@@ -36,6 +36,7 @@ io.on('connection', (socket) => {
   console.log("connected");
   
   mud.addListener('data', (data) => {
+    console.log("data: ", data);
     const formatted = formatter.go(data);
     // const splitted = formatted.split("<br>");
     //let i = 0;

@@ -90,7 +90,7 @@
   }
 
   span.black {
-    color: #777777;
+    color: crimson;
   }
 
   span.red {
@@ -228,6 +228,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script>
+      // bank for history of incoming messages:
+      const msgHistory = [];
       
       $( () => {
         // Send messages:
@@ -249,7 +251,13 @@
           const data = message.data;
           const messut = document.getElementById('messages');
           
+          msgHistory.push(message.data);
           messut.innerHTML = messut.innerHTML + '<li>' + data;
+          // destroy old data to avoid lag:
+          if (messut.innerHTML.length > 3000) {
+            messut.innerHTML = messut.innerHTML.slice(message.data.length);
+            
+          }
           
           //$('#messages').append($('<li>').text(data));
           $("#outp").scrollTop($("#outp")[0].scrollHeight);
