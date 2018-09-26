@@ -1,4 +1,5 @@
 dependencies:
+  ejs: 2.6.1
   express: 4.16.3
   fs: 0.0.2
   net: 1.0.2
@@ -148,6 +149,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
+  /ejs/2.6.1:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha512-0xy4A/twfrRCnkhfk8ErDi5DqdAsAqeGxht4xkCUrsvhhbQNs7E+4jV0CN7+NKIY0aHE72+XvqtBIXzD31ZbXQ==
   /encodeurl/1.0.2:
     dev: false
     engines:
@@ -356,6 +363,7 @@ packages:
       integrity: sha512-lc/aahn+t4/SWV/qcmumYjymLsWfN3ELhpmVuUFjgsORruuZPVSwAQryq+HHGvO/SI2KVX26bx+En+zhM8g8hQ==
   /mime/1.4.1:
     dev: false
+    hasBin: true
     resolution:
       integrity: sha512-KI1+qOZu5DcW6wayYHSzR/tXKCDC5Om4s1z2QJjDULzLcmf3DvzS7oluY4HCTrc+9FiKmWUgeNLg7W3uIQvxtQ==
   /ms/2.0.0:
@@ -593,9 +601,10 @@ packages:
     resolution:
       integrity: sha1-AI4G2AlDIMNy28L47XagymyKxBk=
 registry: 'https://registry.npmjs.org/'
-shrinkwrapMinorVersion: 7
+shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
+  ejs: ^2.6.1
   express: ^4.16.3
   fs: ^0.0.2
   net: ^1.0.2
