@@ -13,4 +13,6 @@ to fix:
 2. umlauts.
 
 To use: export to Glitch.
+
 Change from config/config.json muds address and port to what ever mud you want.
+
